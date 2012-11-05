@@ -1,0 +1,17 @@
+c:\users\sem\documents\visual studio 2012\Projects\bedix\bedix\bin\Debug\bedix.exe.config
+c:\users\sem\documents\visual studio 2012\Projects\bedix\bedix\bin\Debug\bedix.exe
+c:\users\sem\documents\visual studio 2012\Projects\bedix\bedix\bin\Debug\bedix.pdb
+c:\users\sem\documents\visual studio 2012\Projects\bedix\bedix\obj\Debug\bedix.csprojResolveAssemblyReference.cache
+c:\users\sem\documents\visual studio 2012\Projects\bedix\bedix\obj\Debug\bedix.Properties.Resources.resources
+c:\users\sem\documents\visual studio 2012\Projects\bedix\bedix\obj\Debug\bedix.csproj.GenerateResource.Cache
+c:\users\sem\documents\visual studio 2012\Projects\bedix\bedix\obj\Debug\bedix.exe
+c:\users\sem\documents\visual studio 2012\Projects\bedix\bedix\obj\Debug\bedix.pdb
+c:\users\sem\documents\visual studio 2012\Projects\bedix\bedix\obj\Debug\bedix.login.resources
+C:\Users\sem\documents\visual studio 2012\Projects\bedix\bedix\obj\Debug\bedix.Anasayfa.resources
+C:\Users\sem\documents\visual studio 2012\Projects\bedix\bedix\obj\Debug\bedix.Satis.resources
+C:\Users\sem\documents\visual studio 2012\Projects\bedix\bedix\obj\Debug\bedix.exe.licenses
+C:\Users\sem\documents\visual studio 2012\Projects\bedix\bedix\obj\Debug\bedix.Giris.resources
+C:\Users\sem\documents\visual studio 2012\Projects\bedix\bedix\obj\Debug\bedix.ekle.resources
+C:\Users\sem\documents\visual studio 2012\Projects\bedix\bedix\obj\Debug\bedix.Sec.resources
+C:\Users\sem\documents\visual studio 2012\Projects\bedix\bedix\obj\Debug\bedix.Sil.resources
+C:\Users\sem\documents\visual studio 2012\Projects\bedix\bedix\bin\Debug\itextsharp.dll
