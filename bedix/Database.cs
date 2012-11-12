@@ -228,6 +228,24 @@ namespace bedix
             }
         }
 
+        public void update(string s)
+        {
+            try
+            {
+                query.CommandText = "UPDATE " + s;
+                query.ExecuteNonQuery();
+            }
+            catch (DataException ex)
+            {
+                new Exception("Baglanti hatasi" + ex.Message);
+            }
+            finally
+            {
+                query.Dispose();
+                adapter.Dispose();
+            }
+        }
+
         public int isThere(string s)
         {
             try

@@ -621,7 +621,7 @@ namespace bedix
 
         private void button12_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.RowCount <= 1)
+            if (dataGridView1.RowCount == 0)
                 HP.error("Ürün eklemesi yapınız.");
             else
             {

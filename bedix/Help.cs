@@ -54,33 +54,24 @@ namespace bedix
         {
             System.Drawing.Bitmap bmpimg;
 
-            //string prodCode = "50101234560841";
-            //string urun = "Ürün Adı";
-            //string renk = "Renk";
-            //string numara = "44";
-            //string nakitFiyat = "165";
-            //string krediFiyat = "195";
-
             bmpimg = box(prodCode, urun, renk, numara, nakitFiyat, krediFiyat);
 
-            //Document doc = new Document();
-            //PdfWriter.GetInstance(doc, new FileStream("C:\\Users\\sem\\Desktop" + "/barkod.pdf", FileMode.Create));
-            //doc.Open();
-            //PdfPTable table = new PdfPTable(4);
-            //table.AddCell(iTextSharp.text.Image.GetInstance(bmpimg, System.Drawing.Imaging.ImageFormat.Png));
-            //table.AddCell(iTextSharp.text.Image.GetInstance(bmpimg, System.Drawing.Imaging.ImageFormat.Png));
-            //table.AddCell(iTextSharp.text.Image.GetInstance(bmpimg, System.Drawing.Imaging.ImageFormat.Png));
-            //table.AddCell("");
-            //doc.Add(table);
-            //doc.Add(table);
-            //doc.Add(table);
-            //doc.Add(table);
-            //doc.Add(table);
-            //doc.Add(table);
-            ////doc.Add(iTextSharp.text.Image.GetInstance(bmpimg, System.Drawing.Imaging.ImageFormat.Png));
-            //doc.Close();
-
             return bmpimg;
+        }
+
+        public DataTable fiyatlar(string barkod, Database DB)
+        {
+            DataTable result = new DataTable();
+            string kategori = barkod.Substring(0, 2);
+            string tur = barkod.Substring(2, 2);
+            string firma = barkod.Substring(4, 3);
+            string urun = barkod.Substring(7, 3);
+            string renk = barkod.Substring(10, 2);
+            string numara = barkod.Substring(12, 2);
+
+            result = DB.get("urun where kategorikodu = '"+ kategori + "' and turkodu = '"+ tur +"' and firmakodu = '"+ firma +"' and urunkodu = '"+ urun +"'");
+
+            return result;
         }
 
         public Bitmap box(string prodCode, string urun, string renk, string numara, string nakitFiyat, string krediFiyat)
@@ -116,21 +107,16 @@ namespace bedix
             return bmpimg;
         }
 
-        //public void addPanel(ref Panel p)
-        //{
-        //    p.Controls.Add(newButton(5));
-        //    p.Controls.Add(newButton(55));
-        //}
-        //public Button newButton(int x)
-        //{
-        //    Button b = new Button();
+        public int hesapla(string oran, string fiyatGirilen, string fiyatEsas)
+        {
+            double yuzdesi = (Convert.ToInt32(oran) / 100.0) * Convert.ToInt32(fiyatEsas);
 
-        //    b.Width = 100;
-        //    b.Height = 50;
+            double minimum = Convert.ToInt32(fiyatEsas) - yuzdesi;
 
-        //    b.Location = new Point(5,x);
-            
-        //    return b;
-        //}
+            if ( minimum > Convert.ToInt32(fiyatGirilen))
+                return 0;
+
+            return 1;
+        }
     }
 }
